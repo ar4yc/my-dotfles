@@ -1,6 +1,6 @@
 # My hyprland WM dotfiles
 ### ⚠️ Warning!
-#### Конфиг в предназначен под 21:9 мониторов (2560x1080), при использовании монитора <br> с соотношением 16:9 <br> **прийдется** переделывать правила окон #
+#### These dotfiles are made **specifically for 21:9 monitors (2560×1080)** #
 ##### Как выглядит: ############
 <img width="2559" height="1079" alt="2026-01-06_13-49" src="https://github.com/user-attachments/assets/cc64f924-7082-4d04-a101-7bf87b82af84" />
 
