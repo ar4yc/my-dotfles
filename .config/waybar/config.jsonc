@@ -3,7 +3,7 @@
   "output": "DP-1",
   "margin-left": 0,
   "margin-right": 0,
-  "height": 28,
+  "height": 29,
   "modules-left": [
     "custom/start",
     "hyprland/workspaces",
@@ -16,8 +16,8 @@
   "modules-right": [
     "mpris",
     "custom/headset_battery",
-    "hyprland/language",
     "group/zvuk",
+    "hyprland/language",
     "network",
     "group/ggg"
   ],
@@ -25,9 +25,9 @@
   "custom/start": {
     "format": "{icon}",
     "format-icons": {
-    "default": [" 󰣇 "]
+    "default": ["󰣇"]
     },
-    "on-click": "rofi -show drun --class rofi-waybar"
+    "on-click": "wofi -show drun"
   },
   
   "hyprland/workspaces": {
@@ -58,7 +58,7 @@
   
   "group/center": {
     "orientation": "horizontal",
-    "modules": ["custom/cava","group/time","custom/swaync"]
+    "modules": ["group/time","custom/swaync"]
   },
 
   "group/hardware": {
@@ -121,7 +121,8 @@
     "format": "{:L%a %d, %b %Y}",
     "tooltip": true,
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%d.%m.%Y}"
+    "format-alt": "{:%d.%m.%Y}",
+    "on-click": "kitty --class clock-waybar -e tty-clock -scC6Dn"
   },
 
   "custom/headset_battery": {
@@ -160,12 +161,12 @@
 
   "group/zvuk": {
     "orientation": "horizontal",
-    "modules": ["pulseaudio#output", "pulseaudio#input"]
+    "modules": ["pulseaudio#output","pulseaudio#input"]
   },
 
   "pulseaudio#output": {
-    "format": "<span color=\"#ced9ed\">{icon}</span>  {volume}%",
-    "format-muted": "",
+    "format": "<span color=\"#ced9ed\">{icon}</span>  {volume}",
+    "format-muted": "<span></span>  {volume}",
     "format-icons": {
       "headphone": "",
       "default": ["", "", ""]
@@ -176,13 +177,13 @@
 
   "pulseaudio#input": {
     "format": "{format_source}",
-    "format-source": "<span color=\"#ced9ed\"></span> {volume}%",
-    "format-source-muted": "",
+    "format-source": "<span color=\"#ced9ed\"></span> {volume}",
+    "format-source-muted": "<span></span> {volume}",
     "tooltip-format": "Fifine a6V",
     "on-click": "pavucontrol",
     "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+",
-    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-"
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 10%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 10%-"
   },
 
   "network": {
@@ -194,7 +195,7 @@
   },
 
   "tray": {
-    "spacing": 10
+    "spacing": 7
   },
 
   "custom/power": {
