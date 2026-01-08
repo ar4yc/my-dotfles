@@ -8,7 +8,7 @@
 
 #### Clone dotfiles: #
 ```bash
-git clone https://github.com/ar4yc/my-dotfiles.git && cp -r my-dotfiles/.* "$HOME/" && cd $HOME && rm -rf .git
+git clone https://github.com/ar4yc/my-dotfiles.git && cp -r my-dotfiles/.config "$HOME/"
 ```
 #### Install Programs #
 ```bash
