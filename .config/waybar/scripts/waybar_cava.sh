@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+# Default values
 BAR="▁▂▃▄▅▆▇█"
 WIDTH=14
 RANGE=
-STANDBY=0
+STANDBY=1
 
 usage() {
     cat <<EOF
@@ -77,5 +78,4 @@ data_format = ascii
 ascii_max_range = $RANGE
 EOF
 
-# Run cava with dictionary
 cava -p "$CONFIG" | sed -u "$SED_DICT"
